@@ -21,7 +21,7 @@ const AudioPlayer = () => {
       }
 
     const { id } = useParams<{ id: string }>(); 
-    const videoUrl = audioLinks.find(item => item.id === id)?.link;
+    const videoUrl = audioLinks.find(item => item.id.toString() === id)?.link;
 
     if (!videoUrl) {
       return <p className="text-white">Audio nicht gefunden.</p>;
@@ -32,7 +32,7 @@ const AudioPlayer = () => {
             <Header />
           
               <main className="main-content">
-            <h1>Jetzt abspielen</h1>
+            <h1>Jetzt Song {id} abspielen</h1>
             <div className="player-container">
               <ReactPlayer width="0" height="0" url={videoUrl} playing={playing} />
               <button className="play-button" onClick={handlePlayPause}>

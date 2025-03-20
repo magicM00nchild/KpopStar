@@ -8,7 +8,7 @@ const InputForm = () => {
     const navigate = useNavigate(); 
 
     const redirect = (inputValue: string) => {
-        const exists = audioLinks.some((item) => item.id === inputValue);
+        const exists = audioLinks.some((item) => item.id.toString() === inputValue);
         if (exists){
             navigate(`/audio/${inputValue}`);
         } else {
