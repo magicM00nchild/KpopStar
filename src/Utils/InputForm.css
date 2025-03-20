@@ -1,8 +1,8 @@
 .input-field {
     background-color: #f4f4f4; /* Helles Grau für den Hintergrund */
     color: #333;               /* Dunkelgraue Schrift */
-    padding: 12px 20px;        /* Polsterung für das Feld */
-    font-size: 16px;           /* Schriftgröße */
+    padding: 15px 40px;        /* Polsterung für das Feld */
+    font-size: 18px;           /* Schriftgröße */
     border: 2px solid #006400; /* Dunkelgrüner Rand */
     border-radius: 8px;        /* Abgerundete Ecken */
     width: 100%;               /* Füllt die gesamte Breite des Containers */

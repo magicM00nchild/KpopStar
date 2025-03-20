@@ -1,0 +1,21 @@
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    padding: 16px;
+    background-color: #2d3748;
+    gap: 3%;
+    box-sizing: border-box;
+    justify-content: center;
+    position: relative;
+  }
+  
+  /* Logo */
+  .logo {
+    position: absolute;
+    left: 16px; 
+    width: 120px;
+    height: auto;
+    cursor: pointer;
+  }

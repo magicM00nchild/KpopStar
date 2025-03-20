@@ -1,33 +1,33 @@
 import React, { useState } from 'react';
 import "./InputForm.css"
 import { useNavigate } from 'react-router-dom';
+import { audioLinks } from '../audioLinks';
 
 const InputForm = () => {
-    // State für das Input-Feld
     const [inputValue, setInputValue] = useState('');
-    const navigate = useNavigate(); // Navigations-Hook von react-router-dom
+    const navigate = useNavigate(); 
 
     const redirect = (inputValue: string) => {
-        navigate(`/audio/${inputValue}`);
+        const exists = audioLinks.some((item) => item.id === inputValue);
+        if (exists){
+            navigate(`/audio/${inputValue}`);
+        } else {
+            navigate("/not-found");
+        }
     }
 
 
-    // Funktion, um den Wert des Input-Feldes zu aktualisieren
     const handleChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
         setInputValue(event.target.value);
     };
 
-    // Funktion, die bei Drücken der Enter-Taste ausgeführt wird
     const handleKeyPress = (event: { key: string; }) => {
         if (event.key === 'Enter') {
-            console.log('Eingegebene Zahl:', inputValue); // Gibt den Wert in der Konsole aus
             redirect(inputValue)
         }
     };
 
-    // Optional: Wenn du den Button verwenden möchtest
     const handleSubmit = () => {
-        console.log('Eingegebene Zahl:', inputValue); // Gibt den Wert in der Konsole aus
         redirect(inputValue)
     };
 
@@ -35,9 +35,9 @@ const InputForm = () => {
         <div className="container-input">
             <input
                 type="text"
-                value={inputValue} // Setzt den Wert des Input-Feldes
-                onChange={handleChange} // Aktualisiert den Wert bei Eingabe
-                onKeyDown={handleKeyPress} // Hört auf die Enter-Taste
+                value={inputValue} 
+                onChange={handleChange} 
+                onKeyDown={handleKeyPress} 
                 className="input-field"
                 placeholder="Gib eine Zahl ein..."
             />
