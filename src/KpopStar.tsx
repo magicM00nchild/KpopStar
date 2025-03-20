@@ -1,29 +1,15 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, useParams } from "react-router-dom";
-import YouTube from "react-youtube";
-import QRCode from "qrcode.react";
 import "./KpopStar.css"
 import ReactPlayer from 'react-player/youtube'
-import { link } from "fs";
-
-const audioLinks = [
-    {id: "1", link: "https://www.youtube.com/watch?v=gdZLi9oWNZg&ab_channel=HYBELABELS"},
-    {id: "2", link: "www.youtube.com/platzhalter"},
-    {id: "3", link: "www.youtube.com/platzhalter"},
-    {id: "4", link: "www.youtube.com/platzhalter"},
-    {id: "5", link: "www.youtube.com/platzhalter"},
-    {id: "6", link: "www.youtube.com/platzhalter"},
-    {id: "7", link: "www.youtube.com/platzhalter"},
-    {id: "8", link: "www.youtube.com/platzhalter"},
-    {id: "9", link: "www.youtube.com/platzhalter"},
-    {id: "10", link: "www.youtube.com/platzhalter"},    
-];
-
+import { audioLinks } from "./audioLinks";
+import InputForm from "./Utils/InputForm";
 
 const Home = () => (
     <div className="home-container">
       <h1>Kpopstar</h1>
-      <p>Scanne einen QR-Code auf den Spielekarten, um dein Audio zu hören.</p>
+      <p>Bist du so ein krasser Kpop Fan?</p>
+      <InputForm />
     </div>
   );
 

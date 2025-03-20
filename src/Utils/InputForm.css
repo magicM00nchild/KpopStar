@@ -1,0 +1,49 @@
+.input-field {
+    background-color: #f4f4f4; /* Helles Grau für den Hintergrund */
+    color: #333;               /* Dunkelgraue Schrift */
+    padding: 12px 20px;        /* Polsterung für das Feld */
+    font-size: 16px;           /* Schriftgröße */
+    border: 2px solid #006400; /* Dunkelgrüner Rand */
+    border-radius: 8px;        /* Abgerundete Ecken */
+    width: 100%;               /* Füllt die gesamte Breite des Containers */
+    box-sizing: border-box;    /* Verhindert, dass Padding den Gesamtbreitenwert überschreitet */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Sanfte Übergänge */
+}
+
+.input-field:focus {
+    border-color: #004d00; /* Dunklerer grüner Rand im Fokus */
+    box-shadow: 0 0 8px rgba(0, 100, 0, 0.6); /* Grüner Schlagschatten, wenn fokussiert */
+    outline: none; /* Entfernt den Standard-Fokus-Rand */
+}
+
+.input-field::placeholder {
+    color: #888; /* Helle graue Farbe für den Platzhalter */
+    font-style: italic; /* Kursivschrift für den Platzhalter */
+}
+
+.button {
+    background-color: #006400; /* Dunkelgrün */
+    color: white;              /* Weiße Schrift */
+    padding: 15px 30px;        /* Größeren Button machen */
+    font-size: 18px;           /* Schriftgröße anpassen */
+    border: none;              /* Keine Randlinie */
+    border-radius: 8px;        /* Abgerundete Ecken */
+    cursor: pointer;          /* Mauszeiger wird zu Hand */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Sanfte Übergänge */
+}
+
+.button:hover {
+    background-color: #004d00; /* Etwas dunkleres Grün beim Hover */
+    transform: scale(1.05);     /* Button leicht vergrößern beim Hover */
+}
+
+.button:active {
+    background-color: #003300; /* Noch dunkleres Grün beim Klicken */
+    transform: scale(1);       /* Button beim Klicken wieder normal */
+}
+
+.container-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
