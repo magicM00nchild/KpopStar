@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes, useParams } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AudioPlayer from "./pages/AudioPlayerYouTube";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";

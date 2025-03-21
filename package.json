@@ -19,7 +19,8 @@
     "react-youtube": "10.1.0",
     "qrcode.react": "4.2.0",
     "react-router-dom": "7.4.0",
-    "axios": "1.8.4"
+    "axios": "1.8.4",
+    "react-player": "2.16.0"
   },
   "scripts": {
     "start": "react-scripts start",

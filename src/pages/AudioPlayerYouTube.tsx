@@ -1,13 +1,9 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { audioLinks } from "../audioLinks";
 import { useState } from "react";
-import InputForm from "../utils/InputForm";
-import ReactPlayer from 'react-player/youtube'
-import logo from "../data/logo_kpop_star.svg"
+import ReactPlayer from "react-player/youtube";
 import "./AudioPlayerYouTube.css"
 import Header from "../utils/Header";
-
-
 
 const AudioPlayer = () => {
     const [playing, setPlaying] = useState(false)
@@ -20,7 +16,7 @@ const AudioPlayer = () => {
         }
       }
 
-    const { id } = useParams<{ id: string }>(); 
+    const { id } = useParams<{ id: string }>();
     const videoUrl = audioLinks.find(item => item.id.toString() === id)?.link;
 
     if (!videoUrl) {
@@ -30,7 +26,6 @@ const AudioPlayer = () => {
     return (
         <div className="container">
             <Header />
-          
               <main className="main-content">
             <h1>Jetzt Song {id} abspielen</h1>
             <div className="player-container">
@@ -44,4 +39,4 @@ const AudioPlayer = () => {
       );
 };
 
-export default AudioPlayer 
+export default AudioPlayer

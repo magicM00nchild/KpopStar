@@ -6,7 +6,6 @@ import logo from "../data/logo_kpop_star.svg"
 const Header = () => {
     const navigate = useNavigate();
 
-
     return (
         <header className="header">
             <img
